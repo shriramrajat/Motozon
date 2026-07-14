@@ -39,7 +39,7 @@ export default async function CarsPage() {
           </div>
         ) : (
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cars.map((car) => (
+            {cars.map((car: any) => (
               <FadeInStaggerItem key={car.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-gray-100 flex flex-col">
                 <div className="relative h-64 bg-gray-200 overflow-hidden">
                   {getImageUrl(car.images) ? (
