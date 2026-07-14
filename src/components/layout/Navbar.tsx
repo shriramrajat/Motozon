@@ -37,8 +37,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="font-heading font-bold text-3xl text-brand-primary tracking-tight">
-              MOTOZON
+            <Link href="/" className="flex items-center gap-3">
+              <img src="/logo.jpg" alt="Motozon Logo" className="h-12 w-auto object-contain rounded-full" />
+              <span className="font-heading font-bold text-2xl md:text-3xl text-brand-primary tracking-tight">
+                MOTOZON
+              </span>
             </Link>
           </div>
           
@@ -57,11 +60,13 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             <Button variant="outline" size="sm" className="hidden lg:flex gap-2">
-              <Phone size={16} /> 1800-123-456
+              <Phone size={16} /> 9145795055
             </Button>
-            <Button variant="primary" size="sm">
-               Get Started
-            </Button>
+            <Link href="/contact">
+              <Button variant="primary" size="sm">
+                 Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -100,9 +105,11 @@ export function Navbar() {
             <Button variant="outline" className="w-full justify-center gap-2 py-3">
               <Phone size={18} /> Call Us
             </Button>
-            <Button variant="primary" className="w-full justify-center gap-2 py-3">
-              Get Started
-            </Button>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Button variant="primary" className="w-full justify-center gap-2 py-3">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </motion.div>
       )}

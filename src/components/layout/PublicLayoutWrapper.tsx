@@ -3,22 +3,24 @@
 import { usePathname } from 'next/navigation';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { WhatsAppButton } from './WhatsAppButton';
 
 export function PublicLayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isAdmin = pathname?.startsWith('/admin');
-
-  if (isAdmin) {
+  
+  // Do not render Navbar/Footer/WhatsApp on admin routes
+  if (pathname?.startsWith('/admin')) {
     return <>{children}</>;
   }
 
   return (
     <>
       <Navbar />
-      <main className="flex-grow pt-16">
+      <main className="min-h-screen pt-[72px]">
         {children}
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
