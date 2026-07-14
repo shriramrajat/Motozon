@@ -14,7 +14,7 @@ export function ServicesSection() {
     },
     {
       title: 'Easy Finance',
-      description: 'Up to 90% bank loans with minimal documentation and instant approval for commercial use.',
+      description: 'Flexible bank loans with minimal documentation and instant approval for commercial use.',
       icon: <IndianRupee className="w-8 h-8 text-brand-primary" />,
     },
     {
@@ -24,7 +24,7 @@ export function ServicesSection() {
     },
     {
       title: 'Fleet Attachment',
-      description: 'Direct attachment with Ola, Uber, and top IT companies in Pune for guaranteed monthly income.',
+      description: 'Direct attachment with top fleet networks and corporate partners in Pune for guaranteed monthly income.',
       icon: <Map className="w-8 h-8 text-brand-primary" />,
     },
     {

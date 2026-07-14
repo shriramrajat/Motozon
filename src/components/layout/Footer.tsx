@@ -9,8 +9,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="font-heading font-bold text-3xl text-brand-primary tracking-tight">
-              MOTOZON
+            <Link href="/" className="inline-flex items-center gap-3">
+              <img src="/logo.jpg" alt="Motozon Logo" className="h-16 w-16 object-cover rounded-full border-2 border-brand-primary" />
+              <span className="font-heading font-bold text-3xl tracking-tight text-white">
+                MOTOZON
+              </span>
             </Link>
             <p className="text-gray-400 max-w-xs mt-4 leading-relaxed">
               Turn your car into a source of monthly income. Pune's trusted commercial vehicle consultancy and business partner.
@@ -54,17 +57,19 @@ export function Footer() {
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="text-brand-primary flex-shrink-0 mt-1" size={18} />
-                <span>Kharadi, Pune, Maharashtra 411014</span>
+                <span>Kalubai Nagar Kharadi Pune</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-brand-primary flex-shrink-0" size={18} />
-                <span>1800-123-456</span>
+                <span>9145795055</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-brand-primary flex-shrink-0" size={18} />
-                <span>contact@motozon.in</span>
+                <span>pramodmyakal@gmail.com</span>
               </li>
-              <li className="pt-2 text-brand-white font-medium">Business Hours: 9 AM - 8 PM</li>
+              <li className="pt-2 text-brand-white font-medium hover:text-brand-primary transition-colors">
+                 <a href="https://www.instagram.com/motozon.multicars/" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+              </li>
             </ul>
           </div>
         </div>
