@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 export function HowItWorksSection() {
   const steps = [
     { num: '1', title: 'Choose Vehicle', desc: 'Select the right commercial car for your needs.' },
-    { num: '2', title: 'Finance Approval', desc: 'Quick processing for up to 90% loan.' },
+    { num: '2', title: 'Finance Approval', desc: 'Quick processing for flexible bank loans.' },
     { num: '3', title: 'Documentation', desc: 'We handle RTO, T-Permit, and Insurance.' },
     { num: '4', title: 'Vehicle Delivery', desc: 'Get the keys to your new business asset.' },
-    { num: '5', title: 'Fleet Attachment', desc: 'Direct onboarding with Ola/Uber/IT.' },
+    { num: '5', title: 'Fleet Attachment', desc: 'Direct onboarding with top fleet networks.' },
     { num: '6', title: 'Start Earning', desc: 'Begin your guaranteed monthly income journey.' },
   ];
 

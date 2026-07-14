@@ -43,7 +43,7 @@ export function CTASection() {
             </Button>
           </Link>
           <Link href="/contact">
-            <Button size="lg" className="w-full sm:w-auto text-lg bg-brand-white text-brand-primary hover:bg-gray-100 gap-2 shadow-xl">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-primary gap-2 shadow-xl">
               <Phone size={20} /> Request Callback
             </Button>
           </Link>
