@@ -27,9 +27,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </nav>
 
         <div className="p-4 border-t border-gray-800">
-          <button className="flex w-full items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
-            <LogOut size={20} /> Logout
-          </button>
+          <form action={async () => {
+            "use server"
+            const { signOut } = await import("@/auth")
+            await signOut()
+          }}>
+            <button type="submit" className="flex w-full items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
+              <LogOut size={20} /> Logout
+            </button>
+          </form>
         </div>
       </div>
 

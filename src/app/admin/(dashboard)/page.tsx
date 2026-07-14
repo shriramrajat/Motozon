@@ -70,7 +70,7 @@ export default async function AdminDashboardPage() {
                   </td>
                 </tr>
               ) : (
-                recentLeads.map((lead) => (
+                recentLeads.map((lead: any) => (
                   <tr key={lead.id} className="border-b border-gray-50 hover:bg-gray-50/80 transition-colors">
                     <td className="py-4 px-6 text-gray-900 font-semibold">{lead.name}</td>
                     <td className="py-4 px-6 text-gray-600 font-medium">{lead.phone}</td>
