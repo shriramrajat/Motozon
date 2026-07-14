@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from '@/components/ui/animations';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,14 +23,14 @@ export default async function CarsPage() {
   return (
     <div className="bg-gray-50 min-h-screen py-16">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-brand-dark mb-4">
             Available <span className="text-brand-primary">Commercial Vehicles</span>
           </h1>
           <p className="text-lg text-gray-600">
             Browse our curated selection of commercial vehicles ready to hit the road and grow your business.
           </p>
-        </div>
+        </FadeIn>
 
         {cars.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-2xl shadow-sm">
@@ -37,9 +38,9 @@ export default async function CarsPage() {
             <p className="text-gray-500">Please check back later or contact us for specific requirements.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cars.map((car) => (
-              <div key={car.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-gray-100 flex flex-col">
+              <FadeInStaggerItem key={car.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-gray-100 flex flex-col">
                 <div className="relative h-64 bg-gray-200 overflow-hidden">
                   {getImageUrl(car.images) ? (
                     <img 
@@ -79,9 +80,9 @@ export default async function CarsPage() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         )}
       </div>
     </div>
