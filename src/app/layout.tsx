@@ -24,6 +24,11 @@ import { PublicLayoutWrapper } from "@/components/layout/PublicLayoutWrapper";
 export const metadata: Metadata = {
   title: "Motozon | Turn Your Car Into a Source of Monthly Income",
   description: "Motozon helps individuals purchase commercial vehicles with finance, permits, fleet attachment, insurance and complete business support in Pune.",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
