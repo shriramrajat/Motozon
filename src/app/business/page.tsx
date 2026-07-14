@@ -33,14 +33,20 @@ export default function BusinessOpportunityPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-10"
           >
-            Don't let your vehicle be a liability. Partner with Motozon to attach your car with top aggregators and IT companies in Pune for guaranteed monthly earnings.
+            Don't let your vehicle be a liability. Partner with Motozon to attach your car with top fleet networks and corporate partners in Pune and PCMC for guaranteed monthly earnings.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Button size="lg" className="text-lg shadow-xl shadow-brand-primary/20">Start Earning Today</Button>
+            <Button 
+              size="lg" 
+              className="text-lg shadow-xl shadow-brand-primary/20"
+              onClick={() => document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Start Earning Today
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -71,7 +77,7 @@ export default function BusinessOpportunityPage() {
                 >
                   <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">The Motozon Way <span className="text-brand-primary">Makes You Money</span></h2>
                   <p className="text-gray-600 leading-relaxed mb-6">
-                    We help you buy a commercial vehicle, arrange up to 90% finance, handle all T-Permit documentation, and attach it to our corporate fleet networks. Your car pays its own EMI and generates profit for you.
+                    We help you buy a commercial vehicle, arrange flexible bank finance, handle all T-Permit documentation, and attach it to our corporate fleet networks. Your car pays its own EMI and generates profit for you.
                   </p>
                   <ul className="space-y-4 mt-8">
                     <li className="flex items-center gap-3"><CheckCircle2 className="text-brand-primary w-6 h-6 flex-shrink-0"/> <span className="font-medium text-brand-dark">Zero Idle Time</span></li>
@@ -113,7 +119,7 @@ export default function BusinessOpportunityPage() {
          </div>
       </section>
       
-      <section className="py-24 bg-gray-50">
+      <section id="apply-form" className="py-24 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
