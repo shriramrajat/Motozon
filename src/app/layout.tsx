@@ -19,8 +19,7 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
 });
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { PublicLayoutWrapper } from "@/components/layout/PublicLayoutWrapper";
 
 export const metadata: Metadata = {
   title: "Motozon | Turn Your Car Into a Source of Monthly Income",
@@ -38,11 +37,9 @@ export default function RootLayout({
       className={`${inter.variable} ${poppins.variable} ${notoSansDevanagari.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans bg-brand-light text-brand-dark">
-        <Navbar />
-        <main className="flex-grow pt-16">
+        <PublicLayoutWrapper>
           {children}
-        </main>
-        <Footer />
+        </PublicLayoutWrapper>
       </body>
     </html>
   );
