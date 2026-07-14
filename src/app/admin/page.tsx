@@ -1,10 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { Users, Car, AlertCircle, TrendingUp } from "lucide-react";
 import Link from 'next/link';
-
-const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined };
-const prisma = globalForPrisma.prisma ?? new PrismaClient();
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 // Disable static rendering for this page so it fetches real-time data
 export const dynamic = 'force-dynamic';
