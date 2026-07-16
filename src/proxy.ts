@@ -1,8 +1,9 @@
 import { auth } from "@/auth"
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 
-export default auth((req) => {
-  const isLoggedIn = !!req.auth
+export default async function proxy(req: NextRequest) {
+  const session = await auth();
+  const isLoggedIn = !!session?.user;
   const isAuthRoute = req.nextUrl.pathname.startsWith('/admin/login')
   const isAdminRoute = req.nextUrl.pathname.startsWith('/admin')
 
@@ -18,7 +19,7 @@ export default auth((req) => {
   }
 
   return NextResponse.next()
-})
+}
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.jpg).*)'],
