@@ -70,4 +70,4 @@ To access the Admin Dashboard, go to [http://localhost:3000/admin](http://localh
 Motozon is configured to be deployed on [Vercel](https://vercel.com/). 
 The `package.json` includes a `postinstall` script (`prisma generate`) to ensure the Prisma Client is correctly built during the Vercel deployment process.
 
-*(Note: SQLite is used as the database. For long-term production use on Vercel's serverless architecture, it is recommended to migrate to a persistent PostgreSQL database like Supabase or Neon to prevent data resets on cold starts).*
+*(Note: SQLite is used as the database. For long-term production use on Vercel's serverless architecture, it is recommended to migrate to a persistent PostgreSQL database like Supabase or Neon to prevent data resets on cold starts)*
